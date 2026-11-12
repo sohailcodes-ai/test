@@ -4,13 +4,12 @@ from testlab.common import heading, note, blank, table_header, table_separator, 
 TITLE = "INTEGRATION TESTING"
 
 DESCRIPTION = (
-    "Integration testing checks that multiple components work correctly "
-    "together when their outputs feed into each other."
+    "Integration testing checks that multiple parts of the system work "
+    "correctly together."
 )
 
 ASPECT = (
-    "The integrated flow: Leave Request -> Validation -> Balance "
-    "Calculation -> Approval Decision"
+    "Leave Request -> Validation -> Balance Calculation -> Approval Decision"
 )
 
 FLOW = (
@@ -104,7 +103,7 @@ def run():
     print()
     summary(count, passed)
     blank()
-    note("These tests exercise several components in sequence and check that")
-    note("state (the balance) is carried correctly between them.")
-    note("A failure here means a component works alone but not together.")
+    note("These tests run several parts in sequence and check that state")
+    note("(the balance) carries correctly between them.")
+    note("A failure means a part works alone but not together with the others.")
     return passed, count

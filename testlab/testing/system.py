@@ -4,8 +4,8 @@ from testlab.common import heading, note, blank, table_header, table_separator, 
 TITLE = "SYSTEM TESTING"
 
 DESCRIPTION = (
-    "System testing tests the Leave Calculator as a complete system, using "
-    "realistic end-to-end inputs exactly as a user would provide them."
+    "System testing checks the Leave Calculator as a complete system, "
+    "using realistic inputs a user would actually provide."
 )
 
 ASPECT = (
@@ -50,7 +50,6 @@ def run():
     print()
     summary(len(cases), passed)
     blank()
-    note("Each test treats the calculator as a whole and uses realistic")
-    note("user input. This differs from unit testing, which checks small")
-    note("parts in isolation.")
+    note("Each test uses realistic user input and treats the calculator as a whole.")
+    note("This is different from unit testing, which checks small parts individually.")
     return passed, len(cases)

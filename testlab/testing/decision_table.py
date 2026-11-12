@@ -5,7 +5,7 @@ TITLE = "DECISION TABLE TESTING"
 
 DESCRIPTION = (
     "Decision Table Testing lists combinations of input conditions and the "
-    "expected action for each, ensuring no rule interaction is missed."
+    "expected result for each, so no rule interaction is missed."
 )
 
 ASPECT = (
@@ -77,6 +77,6 @@ def run():
     print()
     summary(len(cases), passed)
     blank()
-    note("The table captures every meaningful combination of conditions, so")
-    note("no rule interaction is missed. Each row becomes one test case.")
+    note("The table covers every meaningful combination of conditions.")
+    note("Each row becomes one test case.")
     return passed, len(cases)

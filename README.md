@@ -3,17 +3,9 @@ TESTLAB
 
 Software Testing Laboratory
 
-A small terminal application that demonstrates ten software testing
-techniques using one simple subject under test: a Leave Calculator.
+TESTLAB is a small project I built to demonstrate different software testing techniques. Instead of explaining each technique only through theory, I used a Leave Calculator and wrote real test cases to show how each one works.
 
-It is intended for teaching BCA students about software testing through
-concrete, executable examples. There is no database, no authentication,
-no web interface, and no AI.
-
-Application under test
-----------------------
-
-The Leave Calculator is a small leave request system with these rules:
+The application under test is a simple Leave Calculator with these rules:
 
 - Requested leave must be greater than 0.
 - Requested leave cannot exceed the available balance.
@@ -21,11 +13,12 @@ The Leave Calculator is a small leave request system with these rules:
 - Leave type must be a recognised type (casual, sick, earned).
 - Valid requests are approved and reduce the balance.
 
+I chose the Leave Calculator because it has enough rules to demonstrate different testing approaches meaningfully, but it's still easy to understand without prior domain knowledge.
+
 Testing techniques demonstrated
 -------------------------------
 
-The ten demonstrations cover four different kinds of testing. They are not
-all the same category:
+The ten demonstrations cover four different kinds of testing. They are not all the same category:
 
 Testing approaches
   Black-Box Testing   - behaviour only, no knowledge of internals
@@ -45,24 +38,34 @@ Test-design techniques
   Equivalence Partitioning    - one representative from each input partition
   Decision Table Testing      - every combination of conditions covered
 
-Each technique follows the same teaching flow: an explanation, the aspect
-under test, the test cases, execution, expected vs actual results, PASS/
-FAIL, and a short reason why those cases demonstrate the technique.
+Each technique shows an explanation, what is being tested, the test cases, execution results, expected vs actual output, PASS/FAIL, and a short reason why those cases were chosen.
+
+Requirements
+------------
+
+- Python 3 (3.8 or later recommended)
+- No external dependencies
 
 How to run
 ----------
 
-Requires Python 3. No external dependencies.
+Open PowerShell in the project folder:
 
-Interactive menu:
+    cd path\to\test
+
+Check that Python is installed:
+
+    python --version
+
+Run the interactive menu:
 
     python testlab.py
 
-Run everything and see a summary:
+Run all demonstrations and see a summary:
 
     python testlab.py all
 
-Run a single technique:
+Run an individual technique:
 
     python testlab.py blackbox
     python testlab.py whitebox
@@ -79,9 +82,14 @@ Show help:
 
     python testlab.py --help
 
-You can also run the package directly:
+Run the project's own test suite:
 
-    python -m testlab
+    python -m unittest discover -s tests
+
+What you'll see
+---------------
+
+When you select a technique, TESTLAB prints a short explanation, then runs the actual test cases against the Leave Calculator. For each case you'll see the input, expected result, actual result, and PASS/FAIL status. At the end it shows how many passed and a short explanation of why those particular cases demonstrate that technique. The results come from real execution — nothing is hard-coded.
 
 Project structure
 -----------------
@@ -97,16 +105,10 @@ tests/                - automated tests for the project itself
 testlab.py            - executable entry script
 README.md             - this file
 
-Running the project's own tests:
-
-    python -m unittest discover -s tests
-
 Limitations
 -----------
 
 - This is a demonstration tool, not a production leave management system.
-- The Leave Calculator is intentionally small; real systems have many more
-  rules.
-- The testing demonstrations are illustrative, not a replacement for a
-  full test suite.
+- The Leave Calculator is intentionally small; real systems have many more rules.
+- The testing demonstrations are illustrative, not a replacement for a full test suite.
 - Data is held in memory only; nothing is persisted.

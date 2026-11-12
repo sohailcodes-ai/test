@@ -4,8 +4,8 @@ from testlab.common import heading, note, blank, summary
 TITLE = "REGRESSION TESTING"
 
 DESCRIPTION = (
-    "Regression testing re-runs previously passing tests after a change to "
-    "confirm that existing behaviour still works."
+    "Regression testing means running previously passing tests again "
+    "after a change, to confirm existing behaviour still works."
 )
 
 

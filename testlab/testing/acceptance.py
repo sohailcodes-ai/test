@@ -4,8 +4,8 @@ from testlab.common import heading, note, blank, summary
 TITLE = "ACCEPTANCE TESTING"
 
 DESCRIPTION = (
-    "Acceptance testing checks the system against business requirements "
-    "from the user's perspective: does it do what the business needs?"
+    "Acceptance testing checks whether the system meets business "
+    "requirements from the user's point of view."
 )
 
 
@@ -57,8 +57,7 @@ def run():
     print()
     summary(len(cases), passed)
     blank()
-    note("Each case is written from a business requirement, not from the")
-    note("code. This differs from system testing, which checks the system")
-    note("works end-to-end; acceptance testing checks it satisfies the")
-    note("business need.")
+    note("Each case comes from a business requirement, not from the code.")
+    note("System testing checks that everything works end-to-end;")
+    note("acceptance testing checks that it satisfies the business need.")
     return passed, len(cases)

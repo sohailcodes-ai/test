@@ -4,13 +4,13 @@ from testlab.common import heading, note, blank, table_header, table_separator, 
 TITLE = "BLACK-BOX TESTING"
 
 DESCRIPTION = (
-    "Black-box testing checks what the system does, not how it does it. "
-    "Tests are designed from inputs and expected outputs only."
+    "Black-box testing means we only look at what goes in and what comes out. "
+    "We don't need to read the code to test it."
 )
 
 ASPECT = (
-    "Given a leave balance and a number of requested days, does the system "
-    "approve or reject the request?"
+    "Given a leave balance and a number of requested days, does the "
+    "calculator approve or reject the request?"
 )
 
 
@@ -57,6 +57,6 @@ def run():
     summary(len(cases), passed)
     blank()
     note("Why these cases?")
-    note("We only use inputs and expected results.")
-    note("No knowledge of the internal code is needed to write them.")
+    note("Each case only uses inputs and expected results.")
+    note("You don't need to know how the code works inside.")
     return passed, len(cases)

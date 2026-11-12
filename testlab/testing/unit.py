@@ -4,8 +4,8 @@ from testlab.common import heading, note, blank, table_header, table_separator, 
 TITLE = "UNIT TESTING"
 
 DESCRIPTION = (
-    "Unit testing checks individual functions in isolation, separate from "
-    "the rest of the system."
+    "Unit testing means we test individual functions on their own, "
+    "separate from the rest of the system."
 )
 
 ASPECT = (
@@ -56,7 +56,7 @@ def run():
     print()
     summary(len(cases), passed)
     blank()
-    note("Each unit is called directly and checked on its own.")
-    note("This is what distinguishes unit testing from black-box testing,")
+    note("Each function is called directly and checked on its own.")
+    note("That's what makes this unit testing rather than black-box testing,")
     note("which tests the system through its inputs and outputs.")
     return passed, len(cases)

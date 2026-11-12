@@ -4,16 +4,16 @@ from testlab.common import heading, note, blank, table_header, table_separator, 
 TITLE = "WHITE-BOX TESTING"
 
 DESCRIPTION = (
-    "White-box testing looks at the internal program logic. Test inputs are "
-    "chosen to exercise specific conditions and branches in the code."
+    "White-box testing means we look at the actual code logic. We pick "
+    "inputs that exercise specific conditions and branches."
 )
 
 ASPECT = (
-    "The request is checked against four conditions:\n"
-    "  1. Leave type is valid\n"
-    "  2. Days are greater than 0\n"
-    "  3. Days are within the 30-day limit\n"
-    "  4. Days are within the available balance"
+    "The calculator checks four conditions before approving a request:\n"
+    "  1. Is the leave type valid?\n"
+    "  2. Are the days greater than 0?\n"
+    "  3. Are the days within the 30-day limit?\n"
+    "  4. Are the days within the available balance?"
 )
 
 
@@ -55,6 +55,6 @@ def run():
     print()
     summary(len(cases), passed)
     blank()
-    note("Each case isolates one condition while the others remain valid.")
-    note("This lets us see which part of the internal logic is being exercised.")
+    note("Each case changes one condition while the others stay valid.")
+    note("This shows which part of the internal logic each input exercises.")
     return passed, len(cases)

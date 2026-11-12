@@ -4,8 +4,8 @@ from testlab.common import heading, note, blank, summary
 TITLE = "BOUNDARY VALUE ANALYSIS"
 
 DESCRIPTION = (
-    "Boundary Value Analysis tests values at and around the edges of an "
-    "input range, because that is where defects most commonly occur."
+    "Boundary Value Analysis means testing values at and around the edges "
+    "of an input range, because that's where bugs tend to hide."
 )
 
 ASPECT = "Requested leave must be between 1 and 30 days."
@@ -45,10 +45,10 @@ def run():
     print()
     summary(len(boundary_cases), passed)
     blank()
-    note("Note: available balance is another business constraint. Even if")
-    note("days are within 1-30, a request can still be rejected if it")
-    note("exceeds the employee's balance.")
+    note("We pick values just below, at, and just above each boundary.")
+    note("Available balance is another constraint - even if days are within")
+    note("1-30, a request can still be rejected if it exceeds the balance.")
     blank()
     note("Boundary Value Analysis targets values at and around the limits")
-    note("of an input range, because that is where defects most commonly hide.")
+    note("of an input range, because that's where defects most commonly hide.")
     return passed, len(boundary_cases)

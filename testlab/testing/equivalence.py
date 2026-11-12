@@ -4,9 +4,9 @@ from testlab.common import heading, note, blank, summary
 TITLE = "EQUIVALENCE PARTITIONING"
 
 DESCRIPTION = (
-    "Equivalence Partitioning divides inputs into groups (partitions) that "
-    "the system treats the same way. One representative value from each "
-    "partition is enough to test."
+    "Equivalence Partitioning divides inputs into groups that the system "
+    "treats the same way. We only need one representative value from each "
+    "group to test."
 )
 
 ASPECT = (
@@ -44,7 +44,7 @@ def run():
     print()
     summary(len(cases), passed)
     blank()
-    note("One representative value is chosen from each partition because all")
-    note("values in a partition are expected to be handled the same way.")
-    note("This reduces test count while still covering each class of input.")
+    note("One value from each partition is enough because all values in a")
+    note("partition are expected to behave the same way.")
+    note("This keeps the test count low while covering each class of input.")
     return passed, len(cases)
